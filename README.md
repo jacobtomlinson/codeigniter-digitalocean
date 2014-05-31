@@ -1,4 +1,4 @@
-codeigniter-digitalocean
+CodeIgniter DigitalOcean Library
 ========================
 
 A CodeIgniter library for using the DigitalOcean API. All methods supported.
@@ -9,12 +9,12 @@ Documentation for the [Digital Ocean API](https://www.digitalocean.com/api) can 
 
 Installation
 ---------------------
-To install simply copy the contents of the **config**, **helper** and **library** folders into the same folders in your CodeIgniter project.
+To install simply copy the contents of the **config**, **helper** and **library** folders into the same folders in your CodeIgniter project application folder.
 
 
 Config
 ---------------------
-To configure this library you must enter your DigitalOcean **Client ID** and **API Key** into config/digitalocean.php.
+To configure this library you must enter your DigitalOcean **Client ID** and **API Key** into `config/digitalocean.php`.
 
 Instructions on how to generate this information can be found on the [DigitalOcean website](https://www.digitalocean.com/community/articles/how-to-use-the-digitalocean-api).
 
@@ -36,7 +36,7 @@ class Example extends CI_Controller {
 		foreach ($droplets->droplets as $droplet){
 			print 'Name: ' . $droplet->name . '<br />';
 			print 'IP: ' . $droplet->ip_address . '<br />';
-			print '<br />'
+			print '<br />';
 		}
 	}
 }
