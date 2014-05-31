@@ -29,11 +29,11 @@ class Example extends CI_Controller {
 	{
 		$this->load->library('digitalocean');
 		
-		$droplets = $this->digitalocean->getDroplets();
+		$query = $this->digitalocean->getDroplets();
 		
-		print 'Status: ' . $droplets->status . '<br /><br />';
+		print 'Status: ' . $query->status . '<br /><br />';
 		
-		foreach ($droplets->droplets as $droplet){
+		foreach ($query->droplets as $droplet){
 			print 'Name: ' . $droplet->name . '<br />';
 			print 'IP: ' . $droplet->ip_address . '<br />';
 			print '<br />';
